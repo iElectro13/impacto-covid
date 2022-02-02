@@ -4,11 +4,10 @@
 }
 
 * {
-    font-family: Lanenar;
-    outline: 1px solid red;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 .header {
@@ -17,6 +16,7 @@
     align-items: center;
     justify-content: center;
     background: white;
+    color: var(--grey);
 }
 
 .header .container {
@@ -37,12 +37,18 @@
     justify-content: center;
     height: 100%;
     gap: 0.5rem;
+    color: var(--grey);
 }
 
 .right-items {
     gap: 3rem;
     color: var(--grey);
     font-weight: 500;
+}
+
+.right-items span {
+    color: var(--grey);
+
 }
 
 .container {
@@ -114,6 +120,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0rem;
 }
 
 .carrusel {
@@ -309,14 +316,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    gap: 2rem;
 }
 
 .second-div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     flex-direction: column;
+    gap: 0.5rem;
 }
+
+
 
 .copy {
     display: flex;
