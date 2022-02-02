@@ -84,9 +84,9 @@
     background: linear-gradient(0deg, rgba(33,1,55,1) 0%, rgba(33,51,124,1) 16%, rgba(25,141,187,1) 100%);
     height: calc(100vh - 6rem);
     width: 100%;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
+        padding: 3rem 10rem;
 }
 
 #section1 .left, #section1 .right {
@@ -98,7 +98,6 @@
 }
 
 #section1 .left, #section3 .right {
-    padding: 3rem;
     gap: 4rem;
     color: white;
 }
