@@ -1,13 +1,21 @@
 :root {
     --purple: #3B009F;
     --grey: rgb(85, 85, 85);
+    --main-font-1: 'Poppins', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: white;
+    /* font-family: 'Roboto', sans-serif; */
+    /* color: white; */
+    font-family:var(--main-font-1);
+    outline: 1px solid red;
+}
+
+html, body {
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 82, 129, 1);
+    scrollbar-width: thin;
 }
 
 .header {
@@ -27,7 +35,6 @@
 }
 
 .nav__title {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 800;
 }
 
@@ -86,8 +93,19 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-        padding: 3rem 10rem;
 }
+
+#section1 .left h2{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+#section1 .left p{
+    font-size: 1rem;
+    color:white;
+} 
+
+
 
 #section1 .left, #section1 .right {
     display: flex;
@@ -97,13 +115,30 @@
     color: white;
 }
 
+#section1 .left {
+    padding: 2rem 4rem;
+    padding-left: 8rem;
+    align-items: start;
+}
+
 #section1 .left, #section3 .right {
-    gap: 4rem;
+    gap: 2rem;
     color: white;
 }
 
 #section1 .right img {
-    height: 90%;
+    width: 33vw;
+}
+
+.button{
+    background-color: #3B009F;
+    font-family: var(--main-font-1);
+    border-radius: 25px;
+    width: 15rem;
+    height: 10%; 
+    color: white;
+    border: 1px solid #35BFE7;
+    
 }
 
 /* -------------SECCIÓN 2 ---------------*/
@@ -111,7 +146,6 @@
 .section {
     background: rgb(33,1,55);
     height: 100vh;
-    width: 100%;
 }
 
 #section2 {
@@ -122,24 +156,51 @@
     padding: 2rem 0rem;
 }
 
+.section__subtitle{
+    color: white;
+    font-size: 1.5rem;
+}
+
+#section2 h2{
+    color: white;
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
 .carrusel {
     display: grid;
     grid-template-columns: repeat(5, 28%);
-    gap: 2rem;
+    gap: 1rem;
     overflow: auto;
     padding: 2rem;
     width: 95%;
     margin: auto;
+    scrollbar-color: transparent transparent;
 }
 
+
 .carrusel .card {
-    height: 60vh;
-    width: 100%;
+    height: 20rem;
     background: white;
     border-radius: 0.5rem;
     padding: 1rem;
+    gap: 1.rem;
+    
+    
+}
+.carrusel .card h3, p {
+color: #232550;
+gap: 1.5rem;
+
+}
+.carrusel .card h3{
+    font-weight: bolder;
 }
 
+.carrusel .card p{
+    font-size: 1.3rem;
+}
 
 .icon__container {
     width: 4rem;
@@ -149,12 +210,26 @@
     justify-content: center;
     align-items: center;
     border-radius: 30%;
+    font-size: 1.8rem;
+    color: white;
+    
 }
 
 .icon {
     fill: white;
     width: 2rem;
+    }
+
+#box1{
+    background:#FA4C9A;    
 }
+#box2{
+    background:#ECBF24;
+}
+#box3{
+    background: #35BFE7;
+}
+
 
 /*-------------seccion 3---------------*/
 
@@ -164,6 +239,14 @@
     grid-template-rows: auto auto;
     padding: 2rem;
 }
+#section3 h2{
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+#section3 p{
+    color: white;
+    font-size: 1.5rem;
+}
 
 .icons {
     display: flex;
@@ -172,6 +255,7 @@
     width: 80%;
     margin: auto;
     grid-area: span 1 / span 2;
+    font-size: 1.4rem;
 }
 
 .icon__info {
@@ -180,14 +264,17 @@
     justify-content: center;
     align-items: center;
     color: white;
+    
+
+    
 }
 
 .icon-info__icon {
     fill: white;
-}
+    }
 
 
-
+/* sección 4  */
 
 #section4 {
     display: flex;
@@ -196,6 +283,12 @@
     align-items: center;
 }
 
+
+#section4 h2{
+    color: white;
+    font-weight: bolder;
+    font-size: 4rem;
+}
 
 .section-info {
     display: flex;
@@ -214,7 +307,7 @@
     width: 100%;
 }
 
-
+/* section 5  */
 
 #section5 {
     display: flex;
@@ -232,15 +325,36 @@
     
 }
 
+ 
+
+#section5 h2{
+    font-size: 4rem;
+    color: white;
+    font-weight: bolder;
+}
+#section5 p{
+    color: white;
+    font-size: 1.2rem;
+}
+#section5 button{
+    background: white;
+    color: black;
+    border-radius: 0%;
+    height: 10vh;
+    border-style: none;
+    gap: 5rem;
+}
+
 .phone2{
     background: rgb(59,0,161);
     background: linear-gradient(90deg, rgba(59,0,161,1) 37%, rgba(0,185,233,1) 100%);
-    height: 80%;
+    height: 65%;
     padding: 3rem 0rem;
     padding-left: 5rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     position: relative;
+    border-radius: 1rem 0rem 0rem 1rem;
 }
 
 .phone2-img {
@@ -258,6 +372,10 @@
     align-items: end;
     padding-right: 8rem;
 }
+#section6 h3, span{
+    color: white;
+    /* font-size: 1.5rem; */
+}
 
 .links {
     display: flex;
@@ -274,6 +392,8 @@
     align-items: center;
     height: 25%;
     gap: 1rem;
+    width: 60rem;
+    
 }
 
 .link-img {
@@ -287,6 +407,7 @@
     align-items: start;
     height: 100%;
     gap: 1rem;
+    width: 40rem;
 }
 
 
@@ -300,7 +421,11 @@
     gap: 4rem;
     padding: 4rem;
     padding-bottom: 0rem;
-}
+    }
+
+    .letter{
+        color: white;
+    }
 
 .main-div {
     grid-area: span 1 / span 2;
@@ -317,6 +442,7 @@
     align-items: start;
     flex-direction: column;
     gap: 0.5rem;
+    color: white;
 }
 
 
