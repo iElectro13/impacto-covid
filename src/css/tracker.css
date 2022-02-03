@@ -5,7 +5,12 @@
 * {
     margin: 0;
     padding: 0;
-    /* outline: 1px solid red; */
+    /* outline: 1px red solid; */
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
 }
 
 .nav-container, .nav-izq {
@@ -47,4 +52,130 @@
 .icons {
     display: flex;
    justify-content: center;
+}
+
+/* COVID TRACKER */
+
+.tracker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    height: 100vh;
+    padding: 1.3rem;
+    padding-top: 3rem;
+    width: 400px;
+    border-right: 1px solid rgb(233, 219, 219);
+}
+
+.seccion-1 {
+    display: flex;
+    flex-direction: column;
+    width: 21rem;
+    gap: 1rem;
+}
+
+.content-tracker {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 7px;
+}
+
+#red {
+    background-color: #ff00001c;
+}
+
+.rednumber {
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+#yellow {
+    background-color: rgba(255, 255, 0, 0.068);
+}
+
+#green {
+    background-color: rgba(0, 128, 0, 0.151);
+}
+
+#blue {
+    background-color: rgba(0, 0, 255, 0.096);
+}
+
+.tracker-title {
+    font-size: 2.2rem;
+    padding-top: 0.5rem;
+}
+    
+
+.tracker-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(1, 1, 112);
+}
+
+.tracker-number1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(255, 46, 46);
+}
+
+.tracker-number2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: orange
+}
+
+.tracker-number3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: green
+}
+
+.tracker-number4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: blue
+}
+
+.seccion-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.section2content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-flag-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section2title {
+    font-weight: 600;
+    color: rgb(1, 1, 112); 
+}
+
+.section2contentFlag {
+    width: 4rem;
+}
+
+.section2contentText {
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+.section2contentNumber {
+    font-weight: 600;
+    color: rgb(1, 1, 112);
 }
