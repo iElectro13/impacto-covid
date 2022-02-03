@@ -9,7 +9,8 @@
     padding: 0;
     /* font-family: 'Roboto', sans-serif; */
     /* color: white; */
-    font-family:var(--main-font-1)
+    font-family:var(--main-font-1);
+    outline: 1px solid red;
 }
 
 .header {
@@ -29,7 +30,6 @@
 }
 
 .nav__title {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 800;
 }
 
@@ -88,20 +88,19 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 3rem 10rem;
 }
 
 #section1 .left h2{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bolder;
-    
-
 }
 
 #section1 .left p{
-    font-size: 1.5rem;
+    font-size: 1rem;
     color:white;
 } 
+
+
 
 #section1 .left, #section1 .right {
     display: flex;
@@ -109,16 +108,21 @@
     justify-content: center;
     align-items: center;
     color: white;
-   
+}
+
+#section1 .left {
+    padding: 2rem 4rem;
+    padding-left: 8rem;
+    align-items: start;
 }
 
 #section1 .left, #section3 .right {
-    gap: 4rem;
+    gap: 2rem;
     color: white;
 }
 
 #section1 .right img {
-    height: 90%;
+    width: 33vw;
 }
 
 .button{
@@ -137,7 +141,6 @@
 .section {
     background: rgb(33,1,55);
     height: 100vh;
-    width: 100%;
 }
 
 #section2 {
@@ -168,11 +171,12 @@
     padding: 2rem;
     width: 95%;
     margin: auto;
+    scrollbar-color: transparent transparent;
 }
 
+
 .carrusel .card {
-    height: 45vh;
-    width: 100%;
+    height: 20rem;
     background: white;
     border-radius: 0.5rem;
     padding: 1rem;
@@ -339,12 +343,13 @@ gap: 1.5rem;
 .phone2{
     background: rgb(59,0,161);
     background: linear-gradient(90deg, rgba(59,0,161,1) 37%, rgba(0,185,233,1) 100%);
-    height: 80%;
+    height: 65%;
     padding: 3rem 0rem;
     padding-left: 5rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     position: relative;
+    border-radius: 1rem 0rem 0rem 1rem;
 }
 
 .phone2-img {

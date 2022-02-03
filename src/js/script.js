@@ -57,13 +57,11 @@ const domPaint = async () => {
     let countries = await getData('https://disease.sh/v3/covid-19/countries')
     let topTen = await getMany('https://disease.sh/v3/covid-19/countries?sort=cases', 10)
 
-
-
     countries.forEach(country => {
+        console.log(country)
         addValue(countrySelector, option(country.country))
     })
 }
-countrySelector.addEventListener("change", (e)=> {
-    console.log(e)
-})
+
 domPaint() 
+
