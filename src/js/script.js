@@ -27,11 +27,11 @@ const countrySelector = document.getElementById("country-selector")
 
 //Tabs Tracker 1
 const totalCases = document.getElementById("total-cases")
-const totalDeaths = document.getElementById("total-cases")
-const totalRecovered = document.getElementById("total-cases")
-const totalActive = document.getElementById("total-cases")
-const newCases = document.getElementById("total-cases")
-const newDeaths = document.getElementById("total-cases")
+const totalDeaths = document.getElementById("total-deaths")
+const totalRecovered = document.getElementById("total-recovered")
+const totalActive = document.getElementById("total-active")
+const newCases = document.getElementById("new-cases")
+const newDeaths = document.getElementById("new-deaths")
 
 
 
@@ -58,8 +58,22 @@ const domPaint = async () => {
     let topTen = await getMany('https://disease.sh/v3/covid-19/countries?sort=cases', 10)
 
     countries.forEach(country => {
-        console.log(country)
         addValue(countrySelector, option(country.country))
+    })
+
+    countrySelector.addEventListener("change", ()=>{
+        const setTabs = async()=>{
+            let selectedCountry = await getData(`https://disease.sh/v3/covid-19/countries/${countrySelector.selectedOptions[0].text.toLowerCase()}`)
+            totalCases.childNodes[3].innerHTML = selectedCountry.cases
+            totalDeaths.childNodes[3].innerHTML = selectedCountry.deaths
+            totalRecovered.childNodes[3].innerHTML = selectedCountry.recovered
+            totalActive.childNodes[3].innerHTML = selectedCountry.active
+            newCases.childNodes[3].innerHTML = selectedCountry.todayCases
+            newDeaths.childNodes[3].innerHTML = selectedCountry.todayDeaths
+
+            
+        }
+        setTabs()
     })
 }
 

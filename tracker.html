@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+        integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+        integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/tracker2.css">
     <title>Tracker</title>
+
+    <link href="./src/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./src/js/jquery.vmap.js"></script>
+    <script type="text/javascript" src="./src/js/jquery.vmap.world.js"></script>
+    <script type="text/javascript" src="./src/js/jquery.vmap.sampledata.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: '#ffffff',
+                color: '#ffffff',
+                hoverOpacity: 0.8,
+                selectedColor: '#5d12df',
+                enableZoom: true,
+                showTooltip: true,
+                scaleColors: ['#3B009F'],
+                values: sample_data,
+                normalizeFunction: 'polynomial',
+                colors: {gl: '#3B009F'}
+            });
+        });
+    </script>
+
 </head>
+
 <body>
     <!--NAV IZQUIERDA-->
     <nav>
 
     </nav>
     <!--NAV IZQUIERDA-->
-    
+
 
     <!--COVID-19 TRACKER-->
     <div class="tracker">
@@ -21,15 +60,102 @@
     <!--COVID-19 TRACKER-->
 
     <!--Traker 2-->
-    <select name="country-selector" id="country-selector">
-        
-    </select>
+    <div class="tracker2">
+        <select name="country-selector" id="country-selector">
+
+        </select>
+        <span class="date">Updated: February 3, 2022</span>
+        <div class="tabs">
+
+            <div class="tab" id="total-cases">
+                <h3 class="tab-title">Total Cases</h3>
+                <span class="tab-number">6382642</span>
+                <img src="./src/img/covid-defult.svg" alt="">
+            </div>
+            <div class="tab" id="total-deaths">
+                <h3 class="tab-title">Total Deaths</h3>
+                <span class="tab-number">6382642</span>
+                <img src="./src/img/covid-red.svg" alt="">
+            </div>
+            <div class="tab" id="total-recovered">
+                <h3 class="tab-title">Total Recovered</h3>
+                <span class="tab-number">6382642</span>
+                <img src="./src/img/covid-green.svg" alt="">
+            </div>
+            <div class="tab" id="total-active">
+                <h3 class="tab-title">Total Active</h3>
+                <span class="tab-number">6382642</span>
+                <img src="./src/img/covid-blue.svg" alt="">
+
+            </div>
+            <div class="tab" id="new-cases">
+                <h3 class="tab-title">New Cases</h3>
+                <span class="tab-number">6382642</span>
+                <img src="./src/img/covid-orange.svg" alt="">
+            </div>
+            <div class="tab" id="new-deaths">
+                <h3 class="tab-title">New Deaths</h3>
+                <span class="tab-number">6382642</span>
+                <img src="./src/img/covid-redark.svg" alt="">
+            </div>
+        </div>
+
+
+        <div id="vmap"></div>
+
+        <div class="total-tabs">
+            <div class="total-tab">
+                <img src="" alt="" class="total-tab-img">
+                <div class="info">
+                    <span class="total-tab-title">
+                        Total Cases
+                    </span>
+                    <span class="total-tab-number">
+                        16732469
+                    </span>
+                </div>
+            </div>
+            <div class="total-tab">
+                <img src="" alt="" class="total-tab-img">
+                <div class="info">
+                    <span class="total-tab-title">
+                        Total Cases
+                    </span>
+                    <span class="total-tab-number">
+                        16732469
+                    </span>
+                </div>
+            </div>
+            <div class="total-tab">
+                <img src="" alt="" class="total-tab-img">
+                <div class="info">
+                    <span class="total-tab-title">
+                        Total Cases
+                    </span>
+                    <span class="total-tab-number">
+                        16732469
+                    </span>
+                </div>
+            </div>
+            <div class="total-tab">
+                <img src="" alt="" class="total-tab-img">
+                <div class="info">
+                    <span class="total-tab-title">
+                        Total Cases
+                    </span>
+                    <span class="total-tab-number">
+                        16732469
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Traker 2-->
 
 
 
     <!--Traker 3-->
-    
+
     <!--Traker 3-->
 
 
@@ -59,4 +185,5 @@
 
     <script src="./src/js/script.js"></script>
 </body>
+
 </html>
