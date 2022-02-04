@@ -1,231 +1,247 @@
 :root {
-    --main-font-1: 'Poppins', sans-serif;
-    --blue: #3639AE;
+  --main-font-1: "Poppins", sans-serif;
+  --blue: #3639ae;
 }
 
 * {
-    background: #F5F7FB;
-    font-family: var(--main-font-1);
-    margin: 0;
-    padding: 0;
-    /* outline: 1px red solid; */
-    font-family: "Poppins", sans-serif;
+  font-family: var(--main-font-1);
+  margin: 0;
+  padding: 0;
+  /* outline: 1px red solid; */
+  font-family: "Poppins", sans-serif;
 }
 
 body {
     display: flex;
-}
-
-.nav-container, .nav-izq {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 13.5vh;
-    height: 100vh;
-    border: 1px solid rgb(233, 219, 219);
+    padding-left: 360px;
 }
 
 .nav-container {
-    border: none;
-    height: 40rem;
+    position: fixed;
+    left: 0;
+    top:0;
+}
+
+.nav-container,
+.nav-izq {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  border: 1px solid rgb(233, 219, 219);
+}
+
+.nav-container {
+  border: none;
+  height: 40rem;
 }
 
 .icons-virus {
-    width: 55%;
+  width: 55%;
 }
 
 .icons-svg path {
-    fill: var(--blue);
+  fill: var(--blue);
 }
 
 .icons-svg {
-    width: 30px;
-    padding: 1rem;
-    border-radius: 5px;
+  width: 30px;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
-.icons-svg.hover{
-    background-color: var(--blue);
+.icons-svg.hover {
+  background-color: var(--blue);
 }
 
 .icons-svg.hover path {
-    fill: white;
+  fill: white;
 }
 
 .icons {
-    display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* COVID TRACKER */
 
 .tracker {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: auto;
-    height: 100vh;
-    padding: 1.3rem;
-    padding-top: 3rem;
-    width: 400px;
-    border-right: 1px solid rgb(233, 219, 219);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow: auto;
+  height: 100vh;
+  padding: 1.3rem;
+  width: 240px;
+  border-right: 1px solid rgb(233, 219, 219);
+  position: fixed;
+  top: 0;
+  left: 13.5vh;
+  z-index: 10;
 }
 
 .seccion-1 {
-    display: flex;
-    flex-direction: column;
-    width: 21rem;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-tracker {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 7px;
+  flex-wrap: wrap;
 }
 
 #red {
-    background-color: #ff00001c;
+  background-color: #ff00001c;
 }
 
 .rednumber {
-    font-weight: 800;
-    font-size: 4rem;
+  font-weight: 800;
+  font-size: 4rem;
 }
 
 #yellow {
-    background-color: rgba(255, 255, 0, 0.068);
+  background-color: rgba(255, 255, 0, 0.068);
 }
 
 #green {
-    background-color: rgba(0, 128, 0, 0.151);
+  background-color: rgba(0, 128, 0, 0.151);
 }
 
 #blue {
-    background-color: rgba(0, 0, 255, 0.096);
+  background-color: rgba(0, 0, 255, 0.096);
 }
 
 .tracker-title {
-    font-size: 2.2rem;
-    padding-top: 0.5rem;
+  font-size: 2.2rem;
+  padding-top: 0.5rem;
 }
-    
 
 .tracker-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 600;
-    color: rgb(1, 1, 112);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(1, 1, 112);
 }
 
 .tracker-number1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: rgb(255, 46, 46);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(255, 46, 46);
 }
 
 .tracker-number2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: orange
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: orange;
 }
 
 .tracker-number3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: green
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: green;
 }
 
 .tracker-number4 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: blue
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: blue;
 }
 
 .seccion-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 .section2content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .text-flag-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .section2title {
-    font-weight: 600;
-    color: rgb(1, 1, 112); 
+  font-weight: 600;
+  color: rgb(1, 1, 112);
 }
 
 .section2contentFlag {
-    width: 4rem;
+  width: 4rem;
 }
 
 .section2contentText {
-    font-weight: 400;
-    margin-left: 1rem;
+  font-weight: 400;
+  margin-left: 1rem;
 }
 
 .section2contentNumber {
-    font-weight: 600;
-    color: rgb(1, 1, 112);
+  font-weight: 600;
+  color: rgb(1, 1, 112);
 }
 
-.tracker4{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 5px;
-       
+.tracker4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
 }
 
-.country{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    
-    
+.country {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.country img{
-    width: 200%;
-    /* height: 5vh; */
-    border-radius: 5px;
-    }
-
-.foto{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.country img {
+  width: 200%;
+  /* height: 5vh; */
+  border-radius: 5px;
 }
-.column{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-        }
 
- .card{
-     background: white;
-     padding: 1rem;
-     /* height: 7vh; */
-     display: flex;
-     align-items: center;
-     gap: 5px;
- }       
+.foto {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  /* height: 7vh; */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.trackers {
+    grid-area: trackers;
+}
