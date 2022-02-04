@@ -38,6 +38,20 @@ body {
 
 .icons-virus {
   width: 55%;
+   animation: rotation 5s infinite linear;
+  
+
+}
+
+@keyframes rotation {
+    from{
+        
+        transform: rotate(0deg);
+    }
+    to{
+        
+        transform: rotate(360deg);
+    }
 }
 
 .icons-svg path {
@@ -239,6 +253,34 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.tracker5{
+    background: #F7F8FC;
+    border: solid red;
+    gap: 7px;
+    max-width: 100%;
+}
+
+.track{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 90%;
+    flex-wrap: wrap;
+    }
+
+.tarjeta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: white;
+    width: 7rem;
+    height: 10vh;
+    gap: 10px;
+    box-shadow: 0px 0px 10px rgb(224, 224, 224);
 }
 
 

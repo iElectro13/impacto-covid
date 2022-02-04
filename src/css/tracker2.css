@@ -79,6 +79,7 @@
 .tab:hover {
     transform: translateY(-0.8rem);
     transition: all 0.4s ease-in;
+    
 }
 
 .tab-title {
@@ -139,7 +140,28 @@
     top: -3vw;
     right: -3vw;
     opacity: 0.1;
+    animation: rotation 5s infinite linear;
+    
+   
+        }
+.tab img:hover{
+    animation: rotation 5s;
+    
+    }
+
+
+@keyframes rotation {
+    from{
+        
+        transform: rotate(0deg);
+    }
+    to{
+        
+        transform: rotate(360deg);
+    }
 }
+
+
 
 #total-deaths span {
     color: var(--red)
