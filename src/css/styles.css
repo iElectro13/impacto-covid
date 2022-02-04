@@ -4,6 +4,7 @@
     --main-font-1: 'Poppins', sans-serif;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +15,7 @@
 }
 
 html, body {
-    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 82, 129, 1);
-    scrollbar-width: thin;
+    
 }
 
 .header {
@@ -55,7 +55,7 @@ html, body {
 
 .right-items span {
     color: var(--grey);
-
+    
 }
 
 .container {
@@ -339,10 +339,11 @@ gap: 1.5rem;
 #section5 button{
     background: white;
     color: black;
-    border-radius: 0%;
+    border-radius: 5px;
     height: 10vh;
     border-style: none;
     gap: 5rem;
+    margin-top: 0.5rem;
 }
 
 .phone2{
@@ -454,3 +455,42 @@ gap: 1.5rem;
     grid-area: span 1 / span 6;
     width: 100%;
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1024px){
+
+  body {
+      background-color: red;
+  }  
+
+  .container {
+    width: 100%;
+  }
+
+  .button {
+      height: 2rem;
+  }
+
+  #section2 {
+      padding: 6rem 0;
+  }
+
+  .icons {
+      padding-top: 2rem;
+  }
+    
+  .phone2 {
+      padding-right: 4rem;
+  }
+
+    #section6 {
+        padding-right: 0;
+    }
+
+   .carrusel {
+       width: 90%;
+   } 
+}
+
+/* RESPONSIVE */

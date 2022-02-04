@@ -64,17 +64,27 @@ body {
   border-radius: 5px;
 }
 
-.icons-svg.hover {
+.icons-svg:hover {
   background-color: var(--blue);
 }
 
-.icons-svg.hover path {
+.icons-svg:hover path {
   fill: white;
 }
 
-.icons {
+.icons-svg.active {
+  background-color: var(--blue);
+}
+
+.icons-svg.active path {
+  fill: white;
+
+}
+
+.icons, .logo {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* COVID TRACKER */
@@ -93,6 +103,7 @@ body {
   top: 0;
   left: 13.5vh;
   z-index: 10;
+  gap: 1rem;
 }
 
 .seccion-1 {
@@ -107,9 +118,9 @@ body {
 .content-tracker {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 1.5rem;
-  border-radius: 7px;
+  width: 80%;
+  padding: 1rem;
+  border-radius: 5px;
   flex-wrap: wrap;
 }
 
@@ -135,8 +146,7 @@ body {
 }
 
 .tracker-title {
-  font-size: 2.2rem;
-  padding-top: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .tracker-text {
@@ -172,18 +182,20 @@ body {
   color: blue;
 }
 
-.seccion-2 {
+.seccion-2, .flag-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
+  padding-bottom: 2rem;
 }
 
 .section2content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .text-flag-content {
@@ -195,10 +207,12 @@ body {
 .section2title {
   font-weight: 600;
   color: rgb(1, 1, 112);
+  font-size: 1.2rem;
 }
 
 .section2contentFlag {
-  width: 4rem;
+  width: 2.8rem;
+  border-radius: 5px;
 }
 
 .section2contentText {
@@ -286,4 +300,9 @@ body {
 
 .trackers {
     grid-area: trackers;
+}
+
+
+.inactive {
+  display: none;
 }
