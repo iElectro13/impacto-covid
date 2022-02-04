@@ -77,5 +77,9 @@ const domPaint = async () => {
     })
 }
 
-domPaint() 
+
+window.addEventListener('DOMContentLoaded', ()=> {
+
+    domPaint()
+})
 
