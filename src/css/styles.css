@@ -15,8 +15,7 @@
 }
 
 html, body {
-    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 82, 129, 1);
-    scrollbar-width: thin;
+    
 }
 
 .header {
@@ -340,10 +339,11 @@ gap: 1.5rem;
 #section5 button{
     background: white;
     color: black;
-    border-radius: 0%;
+    border-radius: 5px;
     height: 10vh;
     border-style: none;
     gap: 5rem;
+    margin-top: 0.5rem;
 }
 
 .phone2{
@@ -469,10 +469,28 @@ gap: 1.5rem;
   }
 
   .button {
-      height: 200%;
+      height: 2rem;
   }
-      
 
+  #section2 {
+      padding: 6rem 0;
+  }
+
+  .icons {
+      padding-top: 2rem;
+  }
+    
+  .phone2 {
+      padding-right: 4rem;
+  }
+
+    #section6 {
+        padding-right: 0;
+    }
+
+   .carrusel {
+       width: 90%;
+   } 
 }
 
 /* RESPONSIVE */
