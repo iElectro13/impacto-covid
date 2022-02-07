@@ -34,6 +34,8 @@
                         "total-tabs total-tabs";
     justify-items: start;
     gap: 1rem;
+    width: 95%;
+    margin: auto;
 }
 
 

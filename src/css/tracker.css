@@ -144,6 +144,8 @@ body {
 
 .tracker-title {
   font-size: 1.5rem;
+  white-space:nowrap;
+
 }
 
 .tracker-text {
@@ -322,6 +324,7 @@ body {
 }
 .trackers {
     grid-area: trackers;
+    width: 90%;
 }
 
 
