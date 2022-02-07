@@ -82,6 +82,8 @@
     
 }
 
+
+
 .tab-title {
     font-size: 1.2rem;
     font-weight: 500;
@@ -144,12 +146,13 @@
     
    
         }
-.tab img:hover{
+.tab:hover img{
     /* animation: rotation 5s; */
     animation: rotation 5s infinite linear;
     
     
     }
+
 
 
 @keyframes rotation {

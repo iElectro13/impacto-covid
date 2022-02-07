@@ -652,6 +652,17 @@ gap: 1.5rem;
         grid-column: 2;
         grid-row: 3;
     }
+    .carrusel {
+        grid-template-columns: repeat(5, 100%);
+
+        scrollbar-color: transparent transparent;
+    }
+    .footer.section {
+        height: max-content;
+    }
+    .footer{
+        height: max-content;
+    }
 }
 
 /* RESPONSIVE */
