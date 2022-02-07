@@ -368,7 +368,7 @@ body {
 .main-container {
   padding: 1rem;
   background: #F7F8FC;
-
+  overflow: auto;
 }
 
 .main-container h1 {
@@ -386,7 +386,8 @@ body {
 }
 
 .tabs.five {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tarjeta img {
@@ -403,4 +404,18 @@ body {
 
 .tarjeta.active picture {
   box-shadow: none;
+}
+
+
+@media screen and (max-width: 1080px){
+  .tracker {
+    display: none;
+  }
+  .tab.flex {
+    min-width: 20rem;
+  }
+}
+
+@media screen and (max-width: 680px){
+
 }

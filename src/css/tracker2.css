@@ -47,7 +47,7 @@
     font-size: 1rem;
     grid-area: selector;
     box-shadow: 0px 0px 10px rgb(224, 224, 224);
-
+    max-width: 80%;
 }
 
 .date {
@@ -189,4 +189,32 @@
 
 #new-deaths span, #new-deaths-tracker5 span {
     color: var(--brown)
+}
+
+
+@media screen and (max-width: 1080px){
+    .tracker2{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "selector"
+                            "tabs"
+                            "map"
+                            "total-tabs";
+        gap: 1rem;
+        width: 95%;
+        margin: auto;
+    }
+    #vmap {
+        aspect-ratio: 1/1;
+    }
+    .date {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .tabs {
+    grid-template-columns: 1fr;
+
+    }
 }
