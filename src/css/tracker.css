@@ -144,6 +144,8 @@ body {
 
 .tracker-title {
   font-size: 1.5rem;
+  white-space:nowrap;
+
 }
 
 .tracker-text {
@@ -229,15 +231,12 @@ body {
   text-align: center;
   gap: 5px;
   background: #F7F8FC;
-  
 }
 
 .country {
-  display: flex;
-  width: fit-content;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 1rem;
 }
 
 .country img {
@@ -265,7 +264,7 @@ body {
   flex-direction: column;
   gap: 1rem;  
   background: #F7F8FC;
-
+  
 }
 
 .top-cards{
@@ -278,27 +277,30 @@ body {
 
 .card {
   background: white;
-  padding: 1rem;
+  padding: 1rem 0rem;
   /* height: 7vh; */
   display: flex;
   align-items: center;
   gap: 1rem;
   height: 3rem;
   width: 100%;
+  justify-content: center;
 }
 
 .tracker5{
     background: #F7F8FC;
-    border: solid red;
-    gap: 7px;
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
 }
 
 .track{
     display: flex;
-    flex-direction: row;
-    gap: 40px;
-    width: 90%;
+    gap: 20px;
+    width: 100%;
     flex-wrap: wrap;
     }
 
@@ -309,15 +311,40 @@ body {
     align-items: center;
     text-align: center;
     background: white;
-    width: 7rem;
-    height: 10vh;
+    width: max-content;
     gap: 10px;
     box-shadow: 0px 0px 10px rgb(224, 224, 224);
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
 }
 
+.tarjeta p {
+  font-weight: 500;
+}
+
+.tarjeta picture {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.tarjeta:hover {
+  background: var(--blue);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.tarjeta:hover p {
+  color: white;
+}
+
+.tarjeta:hover picture {
+  box-shadow: none;
+
+}
 
 .trackers {
     grid-area: trackers;
+    width: 90%;
 }
 
 
@@ -336,4 +363,59 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.main-container {
+  padding: 1rem;
+  background: #F7F8FC;
+  overflow: auto;
+}
+
+.main-container h1 {
+  background: white;
+  padding: 1rem;
+}
+
+#table_wrapper {
+  background: white;
+  padding: 1rem;
+}
+
+.column h3 {
+  white-space:nowrap;
+}
+
+.tabs.five {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tarjeta img {
+  height: 100%;
+}
+
+.tarjeta.active {
+  background: #3639ae;
+}
+
+.tarjeta.active p {
+  color: white;
+}
+
+.tarjeta.active picture {
+  box-shadow: none;
+}
+
+
+@media screen and (max-width: 1080px){
+  .tracker {
+    display: none;
+  }
+  .tab.flex {
+    min-width: 20rem;
+  }
+}
+
+@media screen and (max-width: 680px){
+
 }
