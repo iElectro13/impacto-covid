@@ -40,6 +40,14 @@ const totalCases = document.getElementById("total-cases"),
     newCases = document.getElementById("new-cases"),
     newDeaths = document.getElementById("new-deaths")
 
+//tabs tracker 5
+const totalCasesTrakerFive = document.getElementById("total-cases-tracker5"),
+    totalDeathsTrakerFive = document.getElementById("total-deaths-tracker5"),
+    totalRecoveredTrakerFive = document.getElementById("total-recovered-tracker5"),
+    totalActiveTrakerFive = document.getElementById("total-active-tracker5"),
+    newCasesTrakerFive = document.getElementById("new-cases-tracker5"),
+    newDeathsTrakerFive = document.getElementById("new-deaths-tracker5")
+
 //Tabs main tracker 
 const tracker1 = document.querySelector('.tracker-number1'),
     tracker2 = document.querySelector('.tracker-number2'),
@@ -77,6 +85,9 @@ tracker5Icon = document.getElementById('tracker5-icon')
 
 //Table
 const tBody = document.getElementById('table-body')
+
+//wise tabs container 
+const wiseTabContainer = document.querySelector('.track')
 
 /*-----------Components----------*/
 //Option
@@ -135,6 +146,17 @@ const tableR = (flag, country, cases, newCases, deaths, newDeaths, recovered, ac
     </tr>`
     return element
 }
+
+//Wise-tabs
+const wiseTab = (flag, country) => {
+    let element = `
+    <div class="${country} tarjeta">
+    <picture class="${country} foto"><img class=${country} src=${flag} alt=""></picture>
+    <p class=${country}>${country}</p>
+    </div>`
+    return element
+}
+
 
 
 /*----------This functions handles the initial DOM load and sets all the data--------*/
@@ -227,6 +249,42 @@ const domPaint = async () => {
         }
         setTabs()
     })
+
+    //Set wise-tabs
+    topTen.forEach(country => {
+        addValue(wiseTabContainer, wiseTab(country.countryInfo.flag, country.country))
+    })
+
+    wiseTabContainer.addEventListener('click', (e)=>{
+        let wiseTabs = document.querySelectorAll('.tarjeta')
+        const setCards = async()=>{
+            let selectedCountry = await getData(`https://disease.sh/v3/covid-19/countries/${e.target.classList[0]}`)
+            totalCasesTrakerFive.childNodes[3].innerHTML = selectedCountry.cases
+            totalDeathsTrakerFive.childNodes[3].innerHTML = selectedCountry.deaths
+            totalRecoveredTrakerFive.childNodes[3].innerHTML = selectedCountry.recovered
+            totalActiveTrakerFive.childNodes[3].innerHTML = selectedCountry.active
+            newCasesTrakerFive.childNodes[3].innerHTML = selectedCountry.todayCases
+            newDeathsTrakerFive.childNodes[3].innerHTML = selectedCountry.todayDeaths
+        }
+        if(e.target.nodeName == 'DIV' && e.target.classList[1] == 'tarjeta'){
+            wiseTabs.forEach(element =>{
+                element.classList.remove('active')
+            })
+            e.target.classList.add('active')
+            setCards()
+
+        } else if(e.target.nodeName != 'DIV'){
+            wiseTabs.forEach(element =>{
+                element.classList.remove('active')
+            })
+            e.target.parentNode.classList.add('active')
+            setCards()
+
+        }
+        
+
+    })
+
 }
 
 

@@ -318,10 +318,30 @@ body {
     border-radius: 5px;
 }
 
+.tarjeta p {
+  font-weight: 500;
+}
+
 .tarjeta picture {
   width: 1.5rem;
   height: 1.5rem;
 }
+
+.tarjeta:hover {
+  background: var(--blue);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.tarjeta:hover p {
+  color: white;
+}
+
+.tarjeta:hover picture {
+  box-shadow: none;
+
+}
+
 .trackers {
     grid-area: trackers;
     width: 90%;
@@ -367,4 +387,20 @@ body {
 
 .tabs.five {
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.tarjeta img {
+  height: 100%;
+}
+
+.tarjeta.active {
+  background: #3639ae;
+}
+
+.tarjeta.active p {
+  color: white;
+}
+
+.tarjeta.active picture {
+  box-shadow: none;
 }
