@@ -13,13 +13,10 @@
 
 body {
     display: flex;
-    padding-left: 360px;
 }
 
 .nav-container {
-    position: fixed;
-    left: 0;
-    top:0;
+
     background: white;
 }
 
@@ -33,8 +30,8 @@ body {
 }
 
 .nav-container {
-  border: none;
-  height: 40rem;
+  display: flex;
+  height: 100vh;
 }
 
 .icons-virus {
@@ -100,12 +97,10 @@ body {
   padding: 1.3rem;
   width: 240px;
   border-right: 1px solid rgb(233, 219, 219);
-  position: fixed;
-  top: 0;
-  left: 13.5vh;
   z-index: 10;
   gap: 1rem;
   background: white;
+  overflow: auto;
 }
 
 .seccion-1 {
