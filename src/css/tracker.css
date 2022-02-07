@@ -64,10 +64,14 @@ body {
 
 .icons-svg:hover {
   background-color: var(--blue);
+  cursor: pointer;
+
 }
 
 .icons-svg:hover path {
   fill: white;
+  cursor: pointer;
+
 }
 
 .icons-svg.active {
