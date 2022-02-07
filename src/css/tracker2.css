@@ -140,12 +140,14 @@
     top: -3vw;
     right: -3vw;
     opacity: 0.1;
-    animation: rotation 5s infinite linear;
+    /* animation: rotation 5s infinite linear; */
     
    
         }
 .tab img:hover{
-    animation: rotation 5s;
+    /* animation: rotation 5s; */
+    animation: rotation 5s infinite linear;
+    
     
     }
 
